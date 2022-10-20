@@ -36,6 +36,12 @@
       "node_modules/**/*",
       "package.json"
     ],
+    "win": {
+      "target": ["portable"]
+    },
+    "portable": {
+      "artifactName": "billing-electron-react.exe"
+    },
     "directories": {
       "buildResources": "assets"
     }
