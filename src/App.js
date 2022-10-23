@@ -18,8 +18,20 @@ function App() {
 }, []);
 
 
+function print() {
+  var printContents = document.getElementById('printarea').innerHTML;
+  var originalContents = document.body.innerHTML;
+
+  document.body.innerHTML = printContents;
+
+  window.print();
+
+  document.body.innerHTML = originalContents;
+}
+
   return (
     <div className="App">
+      <div id='printarea'>
       <div className="App-left">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -32,13 +44,13 @@ function App() {
             })
           }
       </div>
-
+      </div>
       <div className="App-right">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Electron x React billing software
         </p>
-       
+       <button onClick={print} >NYOMTATÁS</button>
       </div>
 
     </div>

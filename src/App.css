@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+button{
+  color: aliceblue;
+background-color: blue;
+height: 30px;
+border-radius: 3px;
+border-radius: 10px;
+border-style: solid blue;
+}
+
+button:hover{
+color: blue;
+background-color: aliceblue;
+}
