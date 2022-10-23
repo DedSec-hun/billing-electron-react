@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pdfLoader</title>
+</head>
+<style>
+    body {
+        margin: 0;
+    }
+    #backButton {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+</style>
+<script type="text/javascript">
+    const electron = require('electron');
+    const { ipcRenderer } = electron;
+
+    function back() {
+        ipcRenderer.send('back')
+    }
+</script>
+<body>
+    <input id="backButton" type="button" onclick="back()" value="Back"/>
+    <iframe src="temp.pdf" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-1;">Iframe not supported</iframe>
+</body>
+</html>
